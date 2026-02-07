@@ -11,6 +11,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" }, // Added About Page
     { name: "Projects", href: "/projects" },
     { name: "Experience", href: "/experience" },
     { name: "Contact", href: "/contact" },
@@ -20,17 +21,17 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="bg-gray-900 text-white px-6 md:px-12 py-4 sticky top-0 z-100 border-b border-gray-800"
+      className="bg-gray-900 text-white px-6 md:px-12 py-4 sticky top-0 z-[100] border-b border-gray-800"
       aria-label="Main Navigation"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* Logo / Name - SEO: Linked to Home */}
+        {/* Logo / Name */}
         <Link href="/" className="font-bold text-xl tracking-tight hover:text-blue-400 transition-colors">
           Udit Patel
         </Link>
 
-        {/* Desktop Menu - SEO: Semantic List */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -72,13 +73,15 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-gray-900 border-t border-gray-800 mt-4 overflow-hidden"
           >
-            <ul className="flex flex-col py-4 gap-4">
+            <ul className="flex flex-col py-4 px-2 gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link 
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-300 hover:text-white px-2 py-1 transition-colors"
+                    className={`${
+                      pathname === link.href ? "text-white font-semibold" : "text-gray-300"
+                    } block hover:text-white px-2 py-1 transition-colors`}
                   >
                     {link.name}
                   </Link>
