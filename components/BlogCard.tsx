@@ -23,7 +23,7 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
           {blog.title}
         </h2>
 
-        <p className="text-gray-400 mb-4 flex-grow line-clamp-3">
+        <p className="text-gray-400 mb-4 grow line-clamp-3">
           {blog.description}
         </p>
 

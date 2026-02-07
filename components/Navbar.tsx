@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="bg-gray-900 text-white px-6 md:px-12 py-4 sticky top-0 z-[100] border-b border-gray-800"
+      className="bg-gray-900 text-white px-6 md:px-12 py-4 sticky top-0 z-100 border-b border-gray-800"
       aria-label="Main Navigation"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">

@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </header>
 
       {/* Content Section */}
-      <div className="flex-grow">
+      <div className="grow">
         <p className="text-gray-400 mb-6 leading-relaxed">
           {project.description}
         </p>
