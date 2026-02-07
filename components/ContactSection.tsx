@@ -1,0 +1,89 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function ContactSection() {
+  return (
+    <>
+      {/* Header */}
+      <section className="text-center max-w-4xl mx-auto mb-20">
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold mb-6"
+        >
+          Contact Me
+        </motion.h1>
+
+        <p className="text-gray-400">
+          I'm open to software engineering opportunities, collaborations,
+          and interesting technical discussions.
+        </p>
+
+      </section>
+
+      {/* Contact Cards */}
+      <section className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+
+        {/* Email */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
+        >
+          <h2 className="text-xl font-semibold mb-3">Email</h2>
+          <p className="text-gray-400">uditpatel.dev@gmail.com</p>
+        </motion.div>
+
+        {/* LinkedIn */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
+        >
+          <h2 className="text-xl font-semibold mb-3">LinkedIn</h2>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            className="text-blue-400 hover:underline"
+          >
+            View Profile
+          </a>
+        </motion.div>
+
+        {/* GitHub */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
+        >
+          <h2 className="text-xl font-semibold mb-3">GitHub</h2>
+
+          <a
+            href="https://github.com"
+            target="_blank"
+            className="text-blue-400 hover:underline"
+          >
+            View Repositories
+          </a>
+        </motion.div>
+
+        {/* Location */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
+        >
+          <h2 className="text-xl font-semibold mb-3">Location</h2>
+          <p className="text-gray-400">India</p>
+        </motion.div>
+
+      </section>
+    </>
+  );
+}
