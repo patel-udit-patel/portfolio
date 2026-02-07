@@ -1,3 +1,5 @@
+"use client";
+
 import FadeIn from "./FadeIn";
 
 interface SkillCardProps {
