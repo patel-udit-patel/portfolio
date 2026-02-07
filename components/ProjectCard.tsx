@@ -6,17 +6,22 @@ import { Project } from "@/types/project";
 
 type ProjectCardProps = {
   project: Project;
+  index: number; // Added index to props type
 };
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.article
-      whileHover={{ y: -5 }} // Subtle vertical lift is more standard than scale
+      // Using index for a staggered entrance animation
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      whileHover={{ y: -5 }} 
       className="flex flex-col h-full border border-gray-700 p-6 rounded-lg bg-gray-900 transition-colors hover:border-gray-500"
     >
       {/* Header Section */}
       <header>
-        <h3 className="text-2xl font-bold mb-3 tracking-tight">
+        <h3 className="text-2xl font-bold mb-3 tracking-tight text-white">
           {project.title}
         </h3>
       </header>
@@ -40,7 +45,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      {/* Footer Section - Pushed to bottom by flex-grow above */}
+      {/* Footer Section */}
       <footer className="mt-auto">
         <Link
           href={`/projects/${project.slug}`}
