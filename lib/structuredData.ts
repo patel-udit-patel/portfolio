@@ -5,7 +5,7 @@ export const personSchema = {
   jobTitle: "Full Stack Developer",
   url: "https://yourdomain.com",
   sameAs: [
-    "https://github.com/yourgithub",
-    "https://linkedin.com/in/yourlinkedin"
+    "https://github.com/patel-udit-patel",
+    "https://www.linkedin.com/in/udit-patel-a3992623b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=copy_link",
   ]
 };

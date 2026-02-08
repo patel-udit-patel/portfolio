@@ -45,7 +45,7 @@ export default function ExperienceTimeline({ experiences }: any) {
               {exp.company}
             </h3>
 
-            <p className="text-sm text-gray-500 mb-4">
+            <p className="text-sm text-gray-300 mb-4">
               {exp.duration}
             </p>
 

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function ContactSection() {
   return (
@@ -32,8 +34,11 @@ export default function ContactSection() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
         >
-          <h2 className="text-xl font-semibold mb-3">Email</h2>
-          <p className="text-gray-400">uditpatel.dev@gmail.com</p>
+          <div className="flex items-center gap-3 mb-3">
+            <MdEmail size={24} className="text-blue-400" />
+            <h2 className="text-xl font-semibold">Email</h2>
+          </div>
+          <p className="text-gray-400">udit0428t@gmail.com</p>
         </motion.div>
 
         {/* LinkedIn */}
@@ -43,10 +48,12 @@ export default function ContactSection() {
           transition={{ delay: 0.2 }}
           className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
         >
-          <h2 className="text-xl font-semibold mb-3">LinkedIn</h2>
-
+          <div className="flex items-center gap-3 mb-3">
+            <FaLinkedin size={24} className="text-blue-400" />
+            <h2 className="text-xl font-semibold">LinkedIn</h2>
+          </div>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/udit-patel-a3992623b/"
             target="_blank"
             className="text-blue-400 hover:underline"
           >
@@ -61,10 +68,12 @@ export default function ContactSection() {
           transition={{ delay: 0.4 }}
           className="bg-gray-900 border border-gray-800 p-6 rounded-lg"
         >
-          <h2 className="text-xl font-semibold mb-3">GitHub</h2>
-
+          <div className="flex items-center gap-3 mb-3">
+            <FaGithub size={24} className="text-blue-400" />
+            <h2 className="text-xl font-semibold">GitHub</h2>
+          </div>
           <a
-            href="https://github.com"
+            href="https://github.com/patel-udit-patel"
             target="_blank"
             className="text-blue-400 hover:underline"
           >

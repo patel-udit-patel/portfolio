@@ -27,7 +27,7 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
           {blog.description}
         </p>
 
-        <div className="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-sm text-gray-500">
+        <div className="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-sm text-gray-300">
           <time dateTime={blog.date}>{blog.date}</time>
           <span className="group-hover:translate-x-1 transition-transform">
             Read more →

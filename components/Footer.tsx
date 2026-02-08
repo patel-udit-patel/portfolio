@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Use react-icons
+import { MdEmail } from "react-icons/md"; // For email icon
 
 export default function Footer() {
   return (
@@ -32,25 +33,21 @@ export default function Footer() {
                 Home
               </Link>
             </li>
-
             <li>
               <Link href="/projects" className="hover:text-blue-400 transition">
                 Projects
               </Link>
             </li>
-
             <li>
               <Link href="/experience" className="hover:text-blue-400 transition">
                 Experience
               </Link>
             </li>
-
             <li>
               <Link href="/blog" className="hover:text-blue-400 transition">
                 Blog
               </Link>
             </li>
-
             <li>
               <Link href="/contact" className="hover:text-blue-400 transition">
                 Contact
@@ -68,21 +65,23 @@ export default function Footer() {
           <div className="flex space-x-4 mb-4">
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/patel-udit-patel"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-400 transition"
               aria-label="GitHub Profile"
             >
-              <Github size={22} />
+              <FaGithub size={22} />
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/udit-patel-a3992623b"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-400 transition"
               aria-label="LinkedIn Profile"
             >
-              <Linkedin size={22} />
+              <FaLinkedin size={22} />
             </a>
 
             <a
@@ -90,13 +89,13 @@ export default function Footer() {
               className="hover:text-blue-400 transition"
               aria-label="Send Email"
             >
-              <Mail size={22} />
+              <MdEmail size={22} />
             </a>
 
           </div>
 
           <p className="text-sm">
-            Email: youremail@example.com
+            Email: udit0428t@gmail.com
           </p>
         </div>
 

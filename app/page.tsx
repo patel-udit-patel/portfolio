@@ -16,24 +16,26 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="left" delay={0.2}>
-              <h2 className="text-xl md:text-2xl text-gray-400 mb-8 font-medium">
+              <h2 className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
                 Backend & Microservices Engineer <br className="hidden md:block" />
-                <span className="text-gray-500">| GenAI Explorer</span>
+                <span className="text-gray-200">| GenAI Explorer</span>
               </h2>
             </FadeIn>
           </div>
 
           <div className="flex-1 flex justify-center order-1 md:order-2">
-             <FadeIn direction="right" delay={0.4}>
+             <FadeIn direction="right" delay={0.4} isLcp>
                 <div className="relative w-64 h-64 md:w-80 md:h-80">
                   <div className="absolute inset-0 rounded-full border-2 border-gray-800 translate-x-3 translate-y-3 shadow-2xl" />
                   <div className="relative w-full h-full rounded-2xl overflow-hidden border border-gray-800 bg-gray-900">
                     <Image
                       src="/images/profile.png"
                       alt="Udit Patel"
-                      fill
-                      className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                      width={320}
+                      height={320}
+                      className="object-cover hover:grayscale-0 transition-colors duration-500"
                       priority
+                      fetchPriority="high"
                     />
                   </div>
                 </div>

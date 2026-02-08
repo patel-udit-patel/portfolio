@@ -68,7 +68,7 @@ export default function ProjectsPage() {
 
       {/* Optional: GitHub CTA
       <footer className="mt-20 text-center">
-        <p className="text-gray-500 mb-4">Want to see more code?</p>
+        <p className="text-gray-300 mb-4">Want to see more code?</p>
         <a 
           href="https://github.com/your-username" 
           className="inline-flex items-center gap-2 px-5 py-2 border border-gray-800 rounded-full hover:bg-gray-900 transition-colors"
